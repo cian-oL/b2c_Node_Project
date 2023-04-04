@@ -36,12 +36,13 @@ async function displayDetails() {
     getNodeDetails().then(data => {
         const nodeInfo = data;
         checkForExistingElement(data);
+        const nodeContainer = document.getElementById("node-container");
         for (var key in nodeInfo) {
             const node = document.createElement("div");
             node.setAttribute("id", key)
             var textnode = document.createTextNode(key + ": " + nodeInfo[key]);
             node.appendChild(textnode);
-            document.body.appendChild(node);
+            nodeContainer.appendChild(node);
         }
     })
 }
