@@ -30,7 +30,7 @@ Voltage platform gives new users some money to use up for free, as long as you w
 ## Objective
 
 Basic functionality provided in the application includes:
-* Enpoint that return information about the first Lighning Node.
+* Endpoint that return information about the first Lightning Node.
 * A simple web page with a button, which when clicked calls the Voltage API and return information about your first Lighning Node and displays it on the web page.
 
 Additional features to implement:
