@@ -34,6 +34,7 @@ async function getNodeDetails() {
 // get details of your node and then display them
 async function displayDetails() {
     getNodeDetails().then(data => {
+        // create and display node info card
         const nodeInfo = data;
         checkForExistingElement(data);
         const nodeContainer = document.getElementById("node-container");
@@ -44,6 +45,17 @@ async function displayDetails() {
             node.appendChild(textnode);
             nodeContainer.appendChild(node);
         }
+        // create & display power button for node card
+        const powerButton = document.createElement("button");
+        powerButton.setAttribute("class", "power-btn");
+        powerButton.appendChild(document.createTextNode("Node On/Off"));
+        nodeContainer.appendChild(powerButton);
+
+        // create & display refresh button for nodeŸ
+        const refreshButton = document.createElement("button");
+        refreshButton.setAttribute("class", "refresh-btn");
+        refreshButton.appendChild(document.createTextNode("Refresh"));
+        nodeContainer.appendChild(refreshButton);
     })
 }
 
