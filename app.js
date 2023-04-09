@@ -18,6 +18,11 @@ app.get("/getNodeInfo", async (req, res) => {
     })
 });
 
+// stop a node
+app.post("/stop/:id", (req, res) => {
+    const { id } = req.params;
+})
+
 // call voltage API and request data about your lightning node
 async function getNodeDetails() {
     const endpoint = new URL("https://api.voltage.cloud/node");
@@ -58,6 +63,9 @@ async function displayDetails() {
         nodeContainer.appendChild(refreshButton);
     })
 }
+
+// Turn on or off node by put request
+app.put()
 
 // check if elements are already displayed
 // if they are then delete them
